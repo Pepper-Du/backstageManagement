@@ -2,6 +2,7 @@ import Vue from 'vue'
 import App from './App.vue'
 import router from './router'
 import './plugins/element.js'
+import MyBreadcrumb from '@/components/myComponent/MyBreadcrumb.vue'
 
 // 引入全局样式表
 import '@/assets/css/global.css'
@@ -33,6 +34,8 @@ axios.interceptors.request.use(config => {
 Vue.prototype.$http = axios
 
 Vue.config.productionTip = false
+
+Vue.component('my-breadcrumb', MyBreadcrumb)
 
 Vue.component('tree-table', TreeTable)
 

@@ -1,11 +1,8 @@
 <template>
   <div>
     <!-- 面包屑导航区域 -->
-    <el-breadcrumb separator-class="el-icon-arrow-right">
-      <el-breadcrumb-item :to="{ path: '/home' }">首页</el-breadcrumb-item>
-      <el-breadcrumb-item>用户管理</el-breadcrumb-item>
-      <el-breadcrumb-item>用户列表</el-breadcrumb-item>
-    </el-breadcrumb>
+    <my-breadcrumb :firstTitle="'用户管理'" :secondTitle="'用户列表'"></my-breadcrumb>
+
     <!-- 卡片式图区域 -->
     <el-card class="box-card">
       <!-- 搜索与添加区域 -->
@@ -123,7 +120,9 @@
 </template>
 
 <script>
+import MyBreadcrumb from '../myComponent/MyBreadcrumb.vue'
 export default {
+  components: { MyBreadcrumb },
   name: 'Users',
   data() {
     // 自定义校验邮箱规则

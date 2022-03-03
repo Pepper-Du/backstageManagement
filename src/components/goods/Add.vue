@@ -173,11 +173,6 @@ export default {
       this.cateList = res.data
     },
 
-    // 级联选择器变化触发的事件
-    handleChange() {
-      console.log(this.addForm.goods_cat)
-    },
-
     // tab标签页选中时触发的事件
     async tabClicked() {
       // 证明访问的是商品参数面板
